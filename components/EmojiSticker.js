@@ -10,7 +10,6 @@ export const EmojiSticker = ({ imageSize, stickerSource }) => {
   const doubleTap = Gesture.Tap()
     .numberOfTaps(2)
     .onStart(() => {
-      console.log('Double tap');
       if (scaleImage.value !== imageSize * 2) {
         scaleImage.value = scaleImage.value * 2;
       }
@@ -29,7 +28,6 @@ export const EmojiSticker = ({ imageSize, stickerSource }) => {
   });
 
   const containerStyle = useAnimatedStyle(() => {
-    console.log(translateX.value, translateY.value);
     return {
       transform: [{ translateX: translateX.value }, { translateY: translateY.value }],
     };
